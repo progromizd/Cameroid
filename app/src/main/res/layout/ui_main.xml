@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rl_root">
+
+    <TextureView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_texture"
+        android:background="#6e2222" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/include_bottom_panel"
+        android:id="@+id/fl_frame"
+        android:background="#6e2222">
+
+    </FrameLayout>
+
+    <android.gesture.GestureOverlayView
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/gestureOverlayView"
+        android:layout_above="@+id/include_bottom_panel"
+        android:visibility="gone"></android.gesture.GestureOverlayView>
+
+    <include
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        layout="@layout/ui_flash_mode"
+        android:layout_gravity="right"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true" />
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:id="@+id/iv_dest" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Button"
+        android:id="@+id/b_from"
+        android:layout_gravity="center_horizontal"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="271dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="200dp"
+        android:visibility="gone" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Button"
+        android:id="@+id/b_to"
+        android:layout_gravity="center_horizontal"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="271dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="296dp"
+        android:visibility="gone" />
+
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        layout="@layout/ui_bottom_panel"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/include_bottom_panel" />
+
+    <include
+        android:layout_width="50dp"
+        android:layout_height="10dp"
+        layout="@layout/ui_tabs_panel"
+        android:layout_above="@+id/include_bottom_panel"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/inc_tabs"
+        android:layout_marginBottom="10dp" />
+
+    <Chronometer
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:id="@+id/c_timer"
+        android:visibility="gone"
+        android:background="@drawable/oval_dark_grey_chrono"
+        android:gravity="center"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:baselineAligned="false"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:weightSum="3"
+    android:id="@+id/ll_cam_bottom_panel">
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:background="#9525272a">
+
+        <RelativeLayout
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/rl_swap_0"
+            android:visibility="visible"
+            android:rotation="0">
+
+            <RelativeLayout
+                android:layout_width="21dp"
+                android:layout_height="21dp"
+                android:gravity="center"
+                android:id="@+id/rl_swap_1"
+                android:layout_centerInParent="true"
+                android:background="@drawable/rl_swap_1">
+
+                <RelativeLayout
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:background="@drawable/rl_swap_2"
+                    android:id="@+id/rl_swap_2" />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/iv_swap"
+                android:background="@mipmap/switch_cam"
+                android:layout_centerInParent="true" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/iv_cancel"
+            android:background="@mipmap/btn_cancel"
+            android:alpha="1"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:background="#9525272a"
+        android:id="@+id/rl_root_for_rec">
+
+        <RelativeLayout
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:background="@drawable/oval_white"
+            android:id="@+id/rl_shoot_0"
+            android:layout_centerInParent="true">
+
+            <RelativeLayout
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/oval_blue"
+                android:gravity="center"
+                android:id="@+id/rl_shoot_1">
+
+                <RelativeLayout
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/oval_light_blue"
+                    android:id="@+id/rl_shoot_2" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerInParent="true"
+            android:id="@+id/rl_shoot_3"
+            android:background="@drawable/oval_red"
+            android:visibility="invisible"></RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_centerInParent="true"
+            android:id="@+id/rl_shoot_4"
+            android:background="@drawable/oval_white_chamfer"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/iv_edit"
+            android:background="@mipmap/crop"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="#9525272a"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/iv_ok"
+            android:background="@mipmap/btn_done"
+            android:alpha="1"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</LinearLayout>
